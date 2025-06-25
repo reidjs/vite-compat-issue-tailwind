@@ -1,6 +1,39 @@
 # vite-compat-issue-tailwind
 
-This template should help get you started developing with Vue 3 in Vite.
+How to reproduce error:
+
+1. fork and clone this repo
+
+2. cd to repo and `npm install`
+
+3. run `npm install tailwindcss @tailwindcss/vite`
+
+
+You should see an error like this: 
+
+```sh
+➜  vite-compat-issue-tailwind npm install tailwindcss @tailwindcss/vite
+
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: vite-compat-issue-tailwind@0.0.0
+npm error Found: vite@7.0.0
+npm error node_modules/vite
+npm error   dev vite@"^7.0.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer vite@"^5.2.0 || ^6" from @tailwindcss/vite@4.1.10
+npm error node_modules/@tailwindcss/vite
+npm error   @tailwindcss/vite@"*" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+```
+
+
 
 ## Recommended IDE Setup
 
